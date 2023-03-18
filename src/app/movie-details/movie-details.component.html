@@ -1,0 +1,10 @@
+
+<h2>{{ movie.Title }}</h2>
+<p>Year: {{ movie.Year }}</p>
+<p>Type: {{ movie.Type }}</p>
+<p>IMDb ID: {{ movie.imdbID }}</p>
+<p>Poster:</p>
+<img [src]="movie.Poster" alt="{{ movie.Title }} poster">
+
+<button (click)="goBack()">Back</button>
+

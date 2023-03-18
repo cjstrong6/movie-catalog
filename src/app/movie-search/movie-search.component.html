@@ -1,0 +1,24 @@
+<div class="movie-search">
+  <h2>Search Movies</h2>
+  <form>
+    <label>Search:</label>
+    <input type="text" name="query" [(ngModel)]="query">
+    <button type="button" (click)="searchMovies(query)">Search</button>
+  </form>
+
+  <div *ngIf="selectedMovie">
+    <p>{{ selectedMovie.Poster}}</p>
+    <h2>{{ selectedMovie.Title }} ({{ selectedMovie.Year }})</h2>
+  </div>
+
+
+  <ul>
+    <li *ngFor="let movie of movies"  (click)="showMovieDetails(movie)">
+      {{ movie.Title }} ({{ movie.Year }})
+      <img src="{{ movie.Poster }}" alt = "Movie Poster" >
+    </li>
+  </ul>
+</div>
+
+
+
